@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Busqueda</h1>
+    <h1>Lista de Marcas</h1>
     <div>
       <label for="search">Buscar por nombre:</label>
       <input type="text" id="search" v-model="nombreABuscar" @input="buscar" />
