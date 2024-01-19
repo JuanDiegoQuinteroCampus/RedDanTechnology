@@ -25,10 +25,7 @@ appClientes.get("/all", async (req, res) => {
       res.send(JSON.stringify(data));
     });
   } catch (error) {
-    console.error(
-      "Error en la conexion a la base de datos o error en la consulta:",
-      error
-    );
+    console.error("Error en la conexion a la base de datos o error en la consulta:", error);
     res.status(500).send("Error en la consulta o conexion a la base de datos");
   }
 });
