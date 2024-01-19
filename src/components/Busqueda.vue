@@ -1,11 +1,16 @@
 <template>
-  <div>
-    <h1>Lista de Marcas</h1>
-    <div>
-      <label for="search">Buscar por nombre:</label>
-      <input type="text" id="search" v-model="nombreABuscar" @input="buscar" />
+  <div class='table-container'>
+    <div class='flex'>
+      <h1>Lista de Marcas</h1>
+      <div class='buscador'>
+        <Export />
+        <Nuevo />
+        <label for="search">Buscar por nombre:</label>
+        <input type="text" id="search" v-model="nombreABuscar" @input="buscar" />
+      </div>
     </div>
-    <table>
+
+    <table class="styled-table">
       <thead>
         <tr>
           <th>ID</th>
@@ -24,6 +29,7 @@
         </tr>
       </tbody>
     </table>
+
     <div>
       <button @click="paginaAnterior" :disabled="paginaActual === 0">Anterior</button>
       <button @click="paginaSiguiente" :disabled="(paginaActual + 1) * pageSize >= clientes.length">Siguiente</button>
@@ -32,7 +38,11 @@
 </template>
 
 <script setup lang="ts">
+import Export from "./Export.vue";
+import Nuevo from "./Nuevo.vue";
 import { ref, onMounted, computed } from 'vue';
+
+
 
 const clientes = ref([]);
 const nombreABuscar = ref('');
@@ -84,4 +94,40 @@ const buscar = () => {
 };
 </script>
 
+<style scoped>
 
+<style scoped>
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .styled-table th {
+    background-color: #f2f2f2;
+  }
+
+  .buscador {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-left: auto;
+    
+  }
+</style>

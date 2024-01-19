@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Tabla de Clientes</h1>
-    <table>
+  <div class='table-container'>
+
+    <table class="styled-table">
       <thead>
         <tr>
           <th>ID</th>
@@ -21,36 +21,36 @@
       </tbody>
     </table>
 
-    <div v-if="mostrarModalEditar">
-      <div>
+    <div v-if="mostrarModalEditar" class="modal-overlay">
+  <div class="modal-card">
         <h2>Editar Cliente</h2>
         <label for="nombre">Nombre:</label>
         <input v-model="clienteEditado.nombre" type="text" id="nombre" />
-
+<br><br>
         <label for="apellido">Apellido:</label>
         <input v-model="clienteEditado.apellido" type="text" id="apellido" />
-
+<br><br>
         <label for="direccion">Dirección:</label>
         <input v-model="clienteEditado.direccion" type="text" id="direccion" />
-
+<br><br>
         <label for="fechaNacimiento">Fecha de Nacimiento:</label>
         <input v-model="clienteEditado.fecha_nacimiento" type="date" id="fechaNacimiento" />
-
+<br><br>
         <label for="telefono">Teléfono:</label>
         <input v-model="clienteEditado.telefono" type="text" id="telefono" />
-
+<br><br>
         <label for="email">Email:</label>
         <input v-model="clienteEditado.email" type="text" id="email" />
-
+<br><br>
         <label for="categoria">Categoría:</label>
         <input v-model="clienteEditado.categoria" type="text" id="categoria" />
-
+<br><br>
         <button @click="actualizarCliente">Actualizar</button>
         <button @click="cerrarModalEditar">Cancelar</button>
       </div>
     </div>
 
-
+<br><br>
     <div>
       <button @click="paginaAnterior">Anterior</button>
       <button @click="paginaSiguiente">Siguiente</button>
@@ -159,5 +159,61 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Puedes agregar estilos específicos para este componente aquí */
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    width: 100%; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .styled-table th {
+    background-color: #f2f2f2;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    height: 300px;
+     display: flex;
+    
+    align-items: center;
+    flex-wrap:wrap;
+
+  }
+
+  .pagination {
+    margin-top: 20px;
+  }
 </style>
+

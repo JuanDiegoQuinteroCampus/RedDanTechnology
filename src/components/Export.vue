@@ -1,6 +1,6 @@
 <template>
+
   <div>
-    <h1>Exportar a PDF</h1>
     <button @click="exportarAPDF">Exportar a PDF</button>
   </div>
 </template>
