@@ -41,6 +41,39 @@ VALUES ('Juan', 'Perez', 'Calle 123', '1990-01-01', 123456789, 'juan@example.com
 INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
 VALUES ('Maria', 'Gomez', 'Avenida 456', '1985-05-15', 987654321, 'maria@example.com', 'Categoria B');
 
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Carlos', 'Rodriguez', 'Plaza Principal 789', '1982-09-20', 555123789, 'carlos@example.com', 'Categoria C');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Laura', 'Ramirez', 'Calle 567', '1995-03-10', 999888777, 'laura@example.com', 'Categoria A');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Pedro', 'Sanchez', 'Av. Libertad 234', '1988-07-12', 111222333, 'pedro@example.com', 'Categoria B');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Ana', 'Martinez', 'Calle 890', '1993-11-25', 777666555, 'ana@example.com', 'Categoria C');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Luis', 'Torres', 'Paseo 456', '1980-04-05', 333444555, 'luis@example.com', 'Categoria A');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Marta', 'Fernandez', 'Calle 789', '1987-08-18', 555444333, 'marta@example.com', 'Categoria B');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Javier', 'Gomez', 'Avenida 678', '1992-02-28', 777888999, 'javier@example.com', 'Categoria A');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Isabel', 'Ruiz', 'Plaza 345', '1984-06-15', 999000111, 'isabel@example.com', 'Categoria C');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Jorge', 'Rodriguez', 'Callejon 12', '1994-12-10', 111222333, 'jorge@example.com', 'Categoria A');
+
+INSERT INTO cliente (nombre, apellido, direccion, fecha_nacimiento, telefono, email, categoria)
+VALUES ('Paola', 'Jimenez', 'Avenida 901', '1989-03-25', 444555666, 'paola@example.com', 'Categoria B');
+
+
+
+
 
 
 
