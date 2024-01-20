@@ -1,4 +1,6 @@
 -- Active: 1688557221070@@localhost@3306@db_prueba_tecnica
+
+
 /* Creación de la base de dato luego se usa */
 CREATE DATABASE db_prueba_tecnica;
 USE db_prueba_tecnica;
